@@ -3,6 +3,7 @@
     "build_targets": [
         ["zsa/voyager", "pneuma"],
         ["keyboardio/atreus", "sillicon"],
-        ["ploopyco/trackball_nano/rev1_001", "ethos"]
+        ["ploopyco/trackball_nano/rev1_001", "ethos"],
+        ["zsa/voyager", "astro"]
     ]
 }
