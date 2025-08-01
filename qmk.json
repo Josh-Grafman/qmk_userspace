@@ -1,4 +1,13 @@
 {
     "userspace_version": "1.1",
-    "build_targets": [["zsa/voyager", "astro"]]
+    "build_targets": [
+        [
+            "zsa/voyager",
+            "astro"
+        ],
+        [
+            "keyboardio/atreus",
+            "callum"
+        ]
+    ]
 }
