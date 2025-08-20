@@ -3,6 +3,8 @@
 #include "oneshot.h"
 #include "swapper.h"
 
+#include "g/keymap_combo.h"
+
 #define HOME G(KC_LEFT)
 #define END G(KC_RGHT)
 #define FWD G(KC_RBRC)
