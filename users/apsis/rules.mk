@@ -1,3 +1,6 @@
+COMBO_ENABLE = yes
+VPATH += keyboards/gboards
+
 INTROSPECTION_KEYMAP_C = apsis.c
 SRC += oneshot.c
 SRC += swapper.c
