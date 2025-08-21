@@ -1,5 +1,8 @@
 COMB(esc_combo, KC_ESC, KC_Q, KC_W) // qw => esc
 COMB(ent_combo, KC_ENT, KC_H, KC_N)  // hn => ret
 
-COMB(lshft_combo, KC_LSFT, KC_R, KC_S) // rs => lshftt
+COMB(lshft_combo, KC_LSFT, KC_R, KC_S) // rs => lshft
 COMB(lctrl_combo, KC_LCTL, KC_S, KC_T) // st => lctrl
+
+COMB(rshft_combo, KC_RSFT, KC_E, KC_I) // ei => rshft
+COMB(rctrl_combo, KC_RCTL, KC_N, KC_E) // ne => rctrl
