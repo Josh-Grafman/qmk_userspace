@@ -1,12 +1,14 @@
-COMB(esc_combo, KC_ESC, KC_Q, KC_W) // qw => esc
+COMB(esc_combo, KC_ESC, KC_Q, KC_W)         // qw => esc
 
-COMB(slep_combo, KC_Y, KC_QUOT, KC_SLEP) // y' => sleep
-COMB(ent_combo, KC_ENT, KC_H, KC_N)  // hn => ret
-COMB(bspc_combo, KC_M, KC_COMM, KC_BSPC) // m, => bspc
-COMB(del_combo, KC_COMM, KC_DOT, KC_DEL) // ,. => del
+COMB(slep_combo, KC_Y, KC_QUOT, KC_SLEP)    // y' => sleep
+COMB(ent_combo, KC_ENT, KC_H, KC_N)         // hn => ret
+COMB(bspc_combo, KC_M, KC_COMM, KC_BSPC)    // m, => bspc
+COMB(del_combo, KC_COMM, KC_DOT, KC_DEL)    // ,. => del
 
-COMB(lshft_combo, KC_LSFT, KC_R, KC_S) // rs => lshft
-COMB(lctrl_combo, KC_LCTL, KC_S, KC_T) // st => lctrl
+COMB(lshft_combo, KC_LSFT, KC_R, KC_S)      // rs => lshft
+COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)      // st => lctrl
 
-COMB(rshft_combo, KC_RSFT, KC_E, KC_I) // ei => rshft
-COMB(rctrl_combo, KC_RCTL, KC_N, KC_E) // ne => rctrl
+COMB(rshft_combo, KC_RSFT, KC_E, KC_I)      // ei => rshft
+COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)      // ne => rctrl
+
+COMB(capsw_combo, CW_TOGG, KC_T, KC_N)      // tn => capsw
