@@ -16,6 +16,11 @@
 #define LA_SYM MO(SYM)
 #define LA_NAV MO(NAV)
 
+#define UNDO  LCTL(KC_Z)
+#define CUT   LCTL(KC_X)
+#define COPY  LCTL(KC_C)
+#define PASTE LCTL(KC_V)
+
 enum layers {
     BSE,
     SYM,
@@ -55,9 +60,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_thirtyfour(
-        KC_TAB,  SW_WIN,  TABL,    TABR,    KC_VOLU,         QK_BOOT, HOME,    KC_UP,   END,     KC_DEL,
-        OS_SHFT, OS_CTRL, OS_ALT,  OS_CMD,  KC_VOLD,         KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC,
-        SPCL,    SPC_R,   BACK,    FWD,     KC_MPLY,         XXXXXXX, KC_PGDN, KC_PGUP, KC_NO,   KC_ENT,
+        KC_VOLD, SW_WIN,  TABL,    TABR,    KC_VOLU,         QK_BOOT, HOME,    KC_UP,   END,     KC_DEL,
+        OS_SHFT, OS_CTRL, OS_ALT,  OS_CMD,  KC_NO,           KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC,
+        UNDO,    CUT,     COPY,    PASTE,   KC_MPLY,         XXXXXXX, KC_PGDN, KC_PGUP, KC_NO,   KC_ENT,
                                        _______, _______, _______, _______
     ),
 
