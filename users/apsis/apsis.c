@@ -33,6 +33,8 @@ enum keycodes {
     SW_WIN,  // Switch to next window         (cmd-tab)
 };
 
+const key_override_t ques_exlm_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUES, KC_EXLM); // S-? -> !
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BSE] = LAYOUT_thirtyfour(
         KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,            KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT,
