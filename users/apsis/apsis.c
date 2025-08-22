@@ -31,7 +31,6 @@ enum keycodes {
     OS_CMD,
 
     SW_WIN,  // Switch to next window         (cmd-tab)
-    SW_LANG, // Switch to next input language (ctl-spc)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -52,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NAV] = LAYOUT_thirtyfour(
         KC_TAB,  SW_WIN,  TABL,    TABR,    KC_VOLU, QK_BOOT, HOME,    KC_UP,   END,     KC_DEL,
         OS_SHFT, OS_CTRL, OS_ALT,  OS_CMD,  KC_VOLD, KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC,
-        SPCL,    SPC_R,   BACK,    FWD,     KC_MPLY, XXXXXXX, KC_PGDN, KC_PGUP, SW_LANG, KC_ENT,
+        SPCL,    SPC_R,   BACK,    FWD,     KC_MPLY, XXXXXXX, KC_PGDN, KC_PGUP, KC_NO,   KC_ENT,
                                    _______, _______, _______, _______
     ),
 
@@ -100,10 +99,6 @@ oneshot_state os_cmd_state = os_up_unqueued;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     update_swapper(
         &sw_win_active, KC_LGUI, KC_TAB, SW_WIN,
-        keycode, record
-    );
-    update_swapper(
-        &sw_lang_active, KC_LCTL, KC_SPC, SW_LANG,
         keycode, record
     );
 
