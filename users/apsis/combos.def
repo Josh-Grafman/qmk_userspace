@@ -2,7 +2,7 @@
 == Base ==
 = Left =
 qw - esc
-wf
+wf - tab
 rs - lshift
 xc
 fp
@@ -12,7 +12,7 @@ wfp
 
 = Right =
 y' - sleep
-uy
+uy - enter
 ei - rshift
 ,.
 lu
@@ -33,5 +33,8 @@ COMB(lshft_combo, KC_LSFT, KC_R, KC_S)
 COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)
 COMB(rshft_combo, KC_RSFT, KC_E, KC_I)
 COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
+
+COMB(tab_combo, KC_TAB, KC_W, KC_F)
+COMB(ent_combo, KC_ENT, KC_U, KC_Y)
 
 COMB(capsw_combo, CW_TOGG, KC_T, KC_N)
