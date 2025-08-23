@@ -1,7 +1,6 @@
 {
     "userspace_version": "1.1",
     "build_targets": [
-        ["zsa/voyager", "astro"],
-        ["keyboardio/atreus", "callum"]
+        ["ploopyco/trackball_nano/rev1_001", "parallax"]
     ]
 }
