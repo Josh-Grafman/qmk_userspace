@@ -2,39 +2,45 @@
 == Base ==
 = Left =
 qw - esc
-wf - tab
+wf
 rs - lshift
 xc
-fp
+fp - tab
 st - lcontrol
-cv
+cv - delete
 wfp
+rst
+xcv
 
 = Right =
 y' - sleep
-uy - enter
+uy
 ei - rshift
 ,.
-lu
+lu - enter
 ne - rcontrol
-m,
+m, - backspace
 luy
+nei
+m,. - backspace word
 
 = Both =
 tn - capsword
 */
 
 COMB(esc_combo, KC_ESC, KC_Q, KC_W)
-COMB(slep_combo, KC_Y, KC_QUOT, KC_SLEP) 
-COMB(bspc_combo, KC_M, KC_COMM, KC_BSPC)
-COMB(del_combo, KC_COMM, KC_DOT, KC_DEL)
+COMB(slep_combo, KC_SLEP, KC_Y, KC_QUOT) 
+COMB(bspc_combo, KC_BSPC, KC_M, KC_COMM)
+COMB(del_combo, KC_DEL, KC_C, KC_V)
+
+COMB(bspcw_combo, C(KC_BSPC), KC_M, KC_COMM, KC_DOT)
 
 COMB(lshft_combo, KC_LSFT, KC_R, KC_S)
 COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)
 COMB(rshft_combo, KC_RSFT, KC_E, KC_I)
 COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
 
-COMB(tab_combo, KC_TAB, KC_W, KC_F)
-COMB(ent_combo, KC_ENT, KC_U, KC_Y)
+COMB(tab_combo, KC_TAB, KC_F, KC_P)
+COMB(ent_combo, KC_ENT, KC_L, KC_U)
 
 COMB(capsw_combo, CW_TOGG, KC_T, KC_N)
