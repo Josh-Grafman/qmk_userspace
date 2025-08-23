@@ -20,10 +20,6 @@
 #define CUT   LCTL(KC_X)
 #define COPY  LCTL(KC_C)
 #define PASTE LCTL(KC_V)
-#define UP KC_UP
-#define DOWN KC_DOWN
-#define LEFT KC_LEFT
-#define RIGHT KC_RGHT
 
 enum layers {
     BSE,
@@ -64,8 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_thirtyfour(
-        KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,         QK_BOOT, HOME,    UP,      END,     KC_DEL,
-        OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, KC_NO,           KC_CAPS, LEFT,    DOWN,    RIGHT,   KC_BSPC,
+        KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,         QK_BOOT, HOME,    KC_UP,   END,     KC_DEL,
+        OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, KC_NO,           KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC,
         UNDO,    CUT,     COPY,    PASTE,   KC_MPLY,         XXXXXXX, KC_PGDN, KC_PGUP, KC_NO,   KC_ENT,
                                        _______, _______, _______, _______
     ),
