@@ -6,6 +6,7 @@
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
+  SCROLL_HOLD
 };
 
 
@@ -204,10 +205,16 @@ bool rgb_matrix_indicators_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-
     case RGB_SLD:
       if (record->event.pressed) {
         rgblight_mode(1);
+      }
+      return false;
+    case SCROLL_HOLD:
+      if (record->event.pressed) {
+        tap_code(KC_SLCK);
+      } else {
+        tap_code(KC_SLCK);
       }
       return false;
   }
