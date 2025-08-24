@@ -23,8 +23,8 @@
 // Dummy
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {{{ KC_NO }}};
 
-#define MOTION_DELAY 100
-#define IDLE_DELAY   50
+#define MOTION_DELAY 40
+#define IDLE_DELAY    3000
 
 typedef enum {
     STATE_IDLE,
@@ -63,7 +63,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
             } else if (timer_elapsed(state_timer) > MOTION_DELAY) {
                 // Sustained motion → request NumLock ON
                 if (!is_numlock_on()) {
-                    tap_code(KC_NUMLOCK);
+                    tap_code(KC_NUM);
                 }
                 state = STATE_ACTIVE;
             }
@@ -82,7 +82,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
             } else if (timer_elapsed(state_timer) > IDLE_DELAY) {
                 // Idle confirmed → request NumLock OFF
                 if (is_numlock_on()) {
-                    tap_code(KC_NUMLOCK);
+                    tap_code(KC_NUM);
                 }
                 state = STATE_IDLE;
             }
