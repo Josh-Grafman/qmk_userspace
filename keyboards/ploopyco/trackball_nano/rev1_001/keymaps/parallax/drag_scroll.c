@@ -13,6 +13,11 @@ static bool set_scrolling = false;
 #    define SCROLL_DIVISOR_V 8.0
 #endif // SCROLL_DIVISOR_V
 
+enum custom_keycodes {
+    DRAG_SCROLL_TOGGLE = SAFE_RANGE,
+    DRAG_SCROLL_MOMENTARY
+};
+
 // Variables to store accumulated scroll values
 static float scroll_accumulated_h = 0;
 static float scroll_accumulated_v = 0;
