@@ -3,8 +3,6 @@
 
 #include QMK_KEYBOARD_H
 
-ASSERT_COMMUNITY_MODULES_MIN_API_VERSION(1, 1, 0);
-
 static bool set_scrolling = false;
 
 // Modify these values to adjust the scrolling speed
