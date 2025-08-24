@@ -23,25 +23,72 @@
 // Dummy
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {{{ KC_NO }}};
 
-static bool set_mse_layer = false;
+#define MOTION_DELAY 100
+#define IDLE_DELAY   50
 
-void keyboard_post_init_user(void) {
-    led_t led_state = host_keyboard_led_state();
-    set_mse_layer = led_state.num_lock;
-}
+typedef enum {
+    STATE_IDLE,
+    STATE_PENDING,
+    STATE_ACTIVE,
+    STATE_STOPPING
+} motion_state_t;
+
+static motion_state_t state = STATE_IDLE;
+static uint32_t state_timer = 0;
 
 bool led_update_user(led_t led_state) {
-    set_mse_layer = led_state.num_lock;
     set_drag_scroll_scrolling(led_state.scroll_lock);
     return true;
 }
 
+static inline bool is_numlock_on(void) {
+    return host_keyboard_led_state().num_lock;
+}
+
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    const bool toggle_threshold = 3;
-    if (((mouse_report.x >= toggle_threshold || mouse_report.x < -toggle_threshold) || (mouse_report.y >= toggle_threshold || mouse_report.y < -toggle_threshold)) && !set_mse_layer) {
-        tap_code(KC_NUM);
-        set_mse_layer = true;
+    int dx = mouse_report.x;
+    int dy = mouse_report.y;
+
+    switch (state) {
+        case STATE_IDLE:
+            if (dx || dy) {
+                state = STATE_PENDING;
+                state_timer = timer_read();
+            }
+            break;
+
+        case STATE_PENDING:
+            if (!(dx || dy)) {
+                state = STATE_IDLE; // false alarm
+            } else if (timer_elapsed(state_timer) > MOTION_DELAY) {
+                // Sustained motion → request NumLock ON
+                if (!is_numlock_on()) {
+                    tap_code(KC_NUMLOCK);
+                }
+                state = STATE_ACTIVE;
+            }
+            break;
+
+        case STATE_ACTIVE:
+            if (!(dx || dy)) {
+                state = STATE_STOPPING;
+                state_timer = timer_read();
+            }
+            break;
+
+        case STATE_STOPPING:
+            if (dx || dy) {
+                state = STATE_ACTIVE; // resumed
+            } else if (timer_elapsed(state_timer) > IDLE_DELAY) {
+                // Idle confirmed → request NumLock OFF
+                if (is_numlock_on()) {
+                    tap_code(KC_NUMLOCK);
+                }
+                state = STATE_IDLE;
+            }
+            break;
     }
+
     return mouse_report;
 }
 
