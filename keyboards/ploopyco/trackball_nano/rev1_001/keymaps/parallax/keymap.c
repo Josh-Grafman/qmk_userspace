@@ -18,6 +18,7 @@
  */
 #include QMK_KEYBOARD_H
 #include "ploopyco.h"
+#include "drag_scroll.h"
 
 // Dummy
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {{{ KC_NO }}};
