@@ -40,30 +40,25 @@ report_mouse_t pointing_device_task_drag_scroll(report_mouse_t mouse_report) {
         mouse_report.x = 0;
         mouse_report.y = 0;
     }
-    return pointing_device_task_drag_scroll_kb(mouse_report);
+    return mouse_report;
 }
 
 // Function to handle key events and enable/disable drag scrolling
 bool process_record_drag_scroll(uint16_t keycode, keyrecord_t *record) {
-    if (!process_record_drag_scroll_kb(keycode, record)) {
-        return true;
-    }
-
     switch (keycode) {
         case DRAG_SCROLL_TOGGLE:
             // Toggle set_scrolling when DRAG_SCROLL key is pressed or released
             if (record->event.pressed) {
                 set_scrolling = !set_scrolling;
             }
-            break;
+            return false;
         case DRAG_SCROLL_MOMENTARY:
             // Toggle set_scrolling when DRAG_SCROLL key is pressed or released
             set_scrolling = record->event.pressed;
-            break;
+            return false;
         default:
-            break;
+            return true;
     }
-    return true;
 }
 
 float get_drag_scroll_h_divisor(void) {
