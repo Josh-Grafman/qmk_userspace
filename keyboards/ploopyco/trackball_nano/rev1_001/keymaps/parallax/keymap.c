@@ -32,7 +32,7 @@ void keyboard_post_init_user(void) {
 
 bool led_update_user(led_t led_state) {
     set_mse_layer = led_state.num_lock;
-    set_drag_scroll(led_state.scroll_lock);
+    set_drag_scroll_scrolling(led_state.scroll_lock);
     return true;
 }
 
