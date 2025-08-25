@@ -9,8 +9,8 @@
 #define END G(KC_RGHT)
 #define FWD G(KC_RBRC)
 #define BACK G(KC_LBRC)
-#define TABL G(S(KC_LBRC))
-#define TABR G(S(KC_RBRC))
+#define TABL LCTL(KC_PGUP)
+#define TABR LCTL(KC_PGDN)
 #define SPCL A(G(KC_LEFT))
 #define SPC_R A(G(KC_RGHT))
 #define LA_SYM MO(SYM)
@@ -57,7 +57,7 @@ wishlist
 - media keys (back play skip)
 - vol up/down
 - ins
-- tabbing keys
+- TABL/TABR
 */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
