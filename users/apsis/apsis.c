@@ -58,8 +58,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [SYM] = LAYOUT_thirtyfour(
         KC_BSLS, KC_PIPE, KC_UNDS, KC_AMPR, KC_PERC,         KC_PLUS, KC_MINS, KC_EQL,  KC_ASTR, KC_SLSH,
-        KC_LABK, KC_COLN, KC_LCBR, KC_LPRN, KC_DLR,          KC_HASH, OS_CTRL, OS_SHFT, OS_ALT,  OS_GUI,
-        KC_PLUS, KC_PIPE, KC_AT,   KC_BSLS, KC_PERC,         XXXXXXX, KC_AMPR, KC_SCLN, KC_COLN, KC_EXLM,
+        KC_LABK, KC_COLN, KC_LCBR, KC_LPRN, KC_LBRC,         KC_HASH, OS_CTRL, OS_SHFT, OS_ALT,  OS_GUI,
+        KC_RABK, KC_SCLN, KC_RCBR, KC_RPRN, KC_RBRC,         XXXXXXX, KC_AMPR, KC_SCLN, KC_COLN, KC_EXLM,
                                        _______, _______, _______, _______
     ),
 
