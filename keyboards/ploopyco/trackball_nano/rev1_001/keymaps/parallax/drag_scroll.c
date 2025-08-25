@@ -42,7 +42,7 @@ report_mouse_t pointing_device_task_drag_scroll(report_mouse_t mouse_report) {
         if (NATURAL_SCROLL) {
             // Invert both axes for natural scrolling
             h = -h;
-            v = -v;
+            v = v;
         }
 
         mouse_report.h = h;
