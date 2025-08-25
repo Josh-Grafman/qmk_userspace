@@ -7,10 +7,10 @@ static bool set_scrolling = false;
 
 // Modify these values to adjust the scrolling speed
 #ifndef SCROLL_DIVISOR_H
-#    define SCROLL_DIVISOR_H 14.0
+#    define SCROLL_DIVISOR_H 18.0
 #endif // SCROLL_DIVISOR_H
 #ifndef SCROLL_DIVISOR_V
-#    define SCROLL_DIVISOR_V 14.0
+#    define SCROLL_DIVISOR_V 18.0
 #endif // SCROLL_DIVISOR_V
 #ifndef NATURAL_SCROLL
 #    define NATURAL_SCROLL true
@@ -40,9 +40,7 @@ report_mouse_t pointing_device_task_drag_scroll(report_mouse_t mouse_report) {
         int8_t v = (int8_t)scroll_accumulated_v;
 
         if (NATURAL_SCROLL) {
-            // Invert both axes for natural scrolling
             h = -h;
-            v = v;
         }
 
         mouse_report.h = h;
