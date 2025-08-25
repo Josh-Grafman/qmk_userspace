@@ -103,7 +103,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
             break;
     }
 
-    return mouse_report;
+    return pointing_device_task_drag_scroll(mouse_report);
 }
 
 void suspend_power_down_user(void) {
