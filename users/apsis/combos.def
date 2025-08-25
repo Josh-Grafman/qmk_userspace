@@ -5,9 +5,10 @@
 4. enter
 5. tab
 6. shift enter
-7. slash
-8. esc
-9. sleep
+7. slash => underscore
+8. dash => em dash
+9. esc
+10. sleep
 
 == Base ==
 = Left =
@@ -17,7 +18,7 @@ rs - lshift
 xc - tab
 fp - line feed
 st - lcontrol
-cv
+cv - tab
 wfp
 rst
 xcv
@@ -47,10 +48,11 @@ COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)
 COMB(rshft_combo, KC_RSFT, KC_E, KC_I)
 COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
 
-COMB(tab_combo, KC_TAB, KC_X, KC_C)
 COMB(ent_combo, KC_ENT, KC_L, KC_U)
 COMB(lf_combo, LSFT(KC_ENTER), KC_F, KC_P)
+COMB(tab_combo, KC_TAB, KC_C, KC_V)
 
+COMB(dash_combo, KC_MINS, KC_X, KC_C)
 COMB(slsh_combo, KC_SLSH, KC_DOT, KC_COMM)
 
 COMB(capsw_combo, CW_TOGG, KC_T, KC_N)
