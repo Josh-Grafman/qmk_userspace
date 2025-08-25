@@ -1,14 +1,13 @@
 /* 
-Keys I want access to on alpha
-1. shift - done (rs, ei)
-2. control - done (st, ne)
-3. backspace - done (m,)
-4. enter - done (lu)
-5. tab - done (xc)
-6. alt enter - decided (fp)
-7. slash - done (.,)
-8. esc - done (qw)
-9. sleep - done (y')
+1. shift
+2. control
+3. backspace
+4. enter
+5. tab
+6. shift enter
+7. slash
+8. esc
+9. sleep
 
 == Base ==
 = Left =
@@ -16,7 +15,7 @@ qw - esc
 wf
 rs - lshift
 xc - tab
-fp
+fp - line feed
 st - lcontrol
 cv
 wfp
@@ -50,6 +49,7 @@ COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
 
 COMB(tab_combo, KC_TAB, KC_X, KC_C)
 COMB(ent_combo, KC_ENT, KC_L, KC_U)
+COMB(lf_combo, LSFT(KC_ENTER), KC_F, KC_P)
 
 COMB(slsh_combo, KC_SLSH, KC_DOT, KC_COMM)
 
