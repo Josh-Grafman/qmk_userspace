@@ -11,4 +11,5 @@ void  set_drag_scroll_h_divisor(float divisor);
 void  set_drag_scroll_v_divisor(float divisor);
 void  set_drag_scroll_divisor(float divisor);
 bool  get_drag_scroll_scrolling(void);
-void  set_drag_scroll_scrolling(bool scrolling);
+void  set_drag_scroll_scrolling(bool scrolling); 
+report_mouse_t pointing_device_task_drag_scroll(report_mouse_t mouse_report);
