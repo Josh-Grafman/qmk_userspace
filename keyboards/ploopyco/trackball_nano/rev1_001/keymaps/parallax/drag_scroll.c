@@ -33,9 +33,17 @@ report_mouse_t pointing_device_task_drag_scroll(report_mouse_t mouse_report) {
         scroll_accumulated_h += (float)mouse_report.x / scroll_divisor_h;
         scroll_accumulated_v += (float)mouse_report.y / scroll_divisor_h;
 
-        // Assign integer parts of accumulated scroll values to the mouse report
-        mouse_report.h = (int8_t)scroll_accumulated_h;
-        mouse_report.v = -(int8_t)scroll_accumulated_v;
+        int8_t h = (int8_t)scroll_accumulated_h;
+        int8_t v = (int8_t)scroll_accumulated_v;
+
+        if (natural_scroll) {
+            // Invert both axes for natural scrolling
+            h = -h;
+            v = -v;
+        }
+
+        mouse_report.h = h;
+        mouse_report.v = v;
 
         // Update accumulated scroll values by subtracting the integer parts
         scroll_accumulated_h -= (int8_t)scroll_accumulated_h;
