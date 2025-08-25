@@ -23,8 +23,8 @@
 
 enum layers {
     BSE,
-    SYM,
     NAV,
+    SYM,
     NUM,
 };
 
@@ -56,17 +56,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                        KC_LSFT, LA_NAV,  LA_SYM,  KC_SPC
     ),
 
-    [SYM] = LAYOUT_thirtyfour(
-        KC_BSLS, KC_PIPE, KC_UNDS, KC_AMPR, KC_PERC,         KC_PLUS, KC_MINS, KC_EQL,  KC_ASTR, KC_SLSH,
-        KC_LABK, KC_COLN, KC_LCBR, KC_LPRN, KC_LBRC,         KC_DLR,  OS_CTRL, OS_SHFT, OS_ALT,  OS_GUI,
-        KC_RABK, KC_SCLN, KC_RCBR, KC_RPRN, KC_RBRC,         XXXXXXX, KC_AT,   KC_HASH, KC_CIRC, KC_TILD,
-                                       _______, _______, _______, _______
-    ),
-
     [NAV] = LAYOUT_thirtyfour(
         KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,         KC_PGUP, HOME,    KC_UP,   END,     KC_CAPS,
         OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, KC_TAB,          KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_ESC,
         UNDO,    CUT,     COPY,    PASTE,   QK_REP,          XXXXXXX, KC_BSPC, KC_DEL,  KC_PSCR, KC_MENU,
+                                       _______, _______, _______, _______
+    ),
+
+    [SYM] = LAYOUT_thirtyfour(
+        KC_BSLS, KC_PIPE, KC_UNDS, KC_AMPR, KC_PERC,         KC_PLUS, KC_MINS, KC_EQL,  KC_ASTR, KC_SLSH,
+        KC_LABK, KC_COLN, KC_LCBR, KC_LPRN, KC_LBRC,         KC_DLR,  OS_CTRL, OS_SHFT, OS_ALT,  OS_GUI,
+        KC_RABK, KC_SCLN, KC_RCBR, KC_RPRN, KC_RBRC,         XXXXXXX, KC_AT,   KC_HASH, KC_CIRC, KC_TILD,
                                        _______, _______, _______, _______
     ),
 
