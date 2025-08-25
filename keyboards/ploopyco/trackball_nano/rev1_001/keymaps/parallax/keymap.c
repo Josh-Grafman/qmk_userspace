@@ -38,6 +38,20 @@ static uint32_t state_timer = 0;
 
 bool led_update_user(led_t led_state) {
     set_drag_scroll_scrolling(led_state.scroll_lock);
+
+    // Sync our motion state to NumLock
+    if (led_state.num_lock) {
+        // Host reports NumLock ON → treat as ACTIVE
+        if (state != STATE_ACTIVE) {
+            state = STATE_ACTIVE;
+        }
+    } else {
+        // Host reports NumLock OFF → treat as IDLE
+        if (state != STATE_IDLE) {
+            state = STATE_IDLE;
+        }
+    }
+
     return true;
 }
 
