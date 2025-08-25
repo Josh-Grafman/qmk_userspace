@@ -48,7 +48,8 @@ const key_override_t slsh_unds_override = ko_make_basic(MOD_MASK_SHIFT, KC_SLSH,
 const key_override_t *key_overrides[] = {
 	&ques_exlm_override,
     &comm_semi_override,
-    &dot_coln_override
+    &dot_coln_override,
+    &slsh_unds_override
 };
 
 /*
