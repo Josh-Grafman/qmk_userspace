@@ -7,10 +7,10 @@ static bool set_scrolling = false;
 
 // Modify these values to adjust the scrolling speed
 #ifndef SCROLL_DIVISOR_H
-#    define SCROLL_DIVISOR_H 8.0
+#    define SCROLL_DIVISOR_H 14.0
 #endif // SCROLL_DIVISOR_H
 #ifndef SCROLL_DIVISOR_V
-#    define SCROLL_DIVISOR_V 8.0
+#    define SCROLL_DIVISOR_V 14.0
 #endif // SCROLL_DIVISOR_V
 
 enum custom_keycodes {
