@@ -39,9 +39,13 @@ enum keycodes {
 };
 
 const key_override_t ques_exlm_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUES, KC_EXLM); // S-? -> !
+const key_override_t comm_semi_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN); // S-, -> ;
+const key_override_t dot_coln_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLN);      // S-. -> :
 
 const key_override_t *key_overrides[] = {
-	&ques_exlm_override
+	&ques_exlm_override,
+    &comm_semi_override,
+    &dot_coln_override
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
