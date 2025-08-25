@@ -12,6 +12,9 @@ static bool set_scrolling = false;
 #ifndef SCROLL_DIVISOR_V
 #    define SCROLL_DIVISOR_V 14.0
 #endif // SCROLL_DIVISOR_V
+#ifndef NATURAL_SCROLL
+#    define NATURAL_SCROLL true
+#endif // NATURAL_SCROLL
 
 enum custom_keycodes {
     DRAG_SCROLL_TOGGLE = SAFE_RANGE,
@@ -36,7 +39,7 @@ report_mouse_t pointing_device_task_drag_scroll(report_mouse_t mouse_report) {
         int8_t h = (int8_t)scroll_accumulated_h;
         int8_t v = (int8_t)scroll_accumulated_v;
 
-        if (natural_scroll) {
+        if (NATURAL_SCROLL) {
             // Invert both axes for natural scrolling
             h = -h;
             v = -v;
