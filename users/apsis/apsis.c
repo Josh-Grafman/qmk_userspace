@@ -51,6 +51,15 @@ const key_override_t *key_overrides[] = {
     &dot_coln_override
 };
 
+/*
+wishlist
+
+- media keys (back play skip)
+- vol up/down
+- ins
+- tabbing keys
+*/
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BSE] = LAYOUT_thirtyfour(
         KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,            KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT,
@@ -60,8 +69,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_thirtyfour(
-        KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,         KC_PGUP, HOME,    KC_UP,   END,     XXXXXX,
-        OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, KC_TAB,          KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_PGUP, HOME,    KC_UP,   END,     XXXXXX,
+        OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, XXXXXXX,         KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,
         UNDO,    CUT,     COPY,    PASTE,   QK_REP,          XXXXXXX, BKWRD,   KC_DEL,  XXXXXXX, XXXXXXX,
                                        _______, _______, _______, _______
     ),
