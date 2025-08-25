@@ -1,13 +1,24 @@
-/*
+/* 
+Keys I want access to on alpha
+1. shift - done (rs, ei)
+2. control - done (st, ne)
+3. backspace - done (m,)
+4. enter - done (lu)
+5. tab - done (xc)
+6. alt enter - decided (fp)
+7. slash - done (.,)
+8. esc - done (qw)
+9. sleep - done (y')
+
 == Base ==
 = Left =
 qw - esc
 wf
 rs - lshift
-xc
-fp - tab
+xc - tab
+fp
 st - lcontrol
-cv - delete
+cv
 wfp
 rst
 xcv
@@ -16,13 +27,13 @@ xcv
 y' - sleep
 uy
 ei - rshift
-,.
+,. - slash
 lu - enter
 ne - rcontrol
 m, - backspace
 luy
 nei
-m,. - backspace word
+m,.
 
 = Both =
 tn - capsword
@@ -31,16 +42,15 @@ tn - capsword
 COMB(esc_combo, KC_ESC, KC_Q, KC_W)
 COMB(slep_combo, KC_SLEP, KC_Y, KC_QUOT) 
 COMB(bspc_combo, KC_BSPC, KC_M, KC_COMM)
-COMB(del_combo, KC_DEL, KC_C, KC_V)
-
-COMB(bspcw_combo, C(KC_BSPC), KC_M, KC_COMM, KC_DOT)
 
 COMB(lshft_combo, KC_LSFT, KC_R, KC_S)
 COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)
 COMB(rshft_combo, KC_RSFT, KC_E, KC_I)
 COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
 
-COMB(tab_combo, KC_TAB, KC_F, KC_P)
+COMB(tab_combo, KC_TAB, KC_X, KC_C)
 COMB(ent_combo, KC_ENT, KC_L, KC_U)
+
+COMB(slsh_combo, KC_SLSH, KC_DOT, KC_COMM)
 
 COMB(capsw_combo, CW_TOGG, KC_T, KC_N)
