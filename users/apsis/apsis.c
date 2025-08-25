@@ -59,6 +59,7 @@ wishlist
 - vol up/down
 - ins
 - TABL/TABR
+- MEH/HYPER
 */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
