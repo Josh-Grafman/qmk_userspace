@@ -43,9 +43,9 @@ COMB(esc_combo, KC_ESC, KC_Q, KC_W)
 COMB(slep_combo, KC_SLEP, KC_Y, KC_QUOT) 
 COMB(bspc_combo, KC_BSPC, KC_M, KC_COMM)
 
-COMB(lshft_combo, KC_LSFT, KC_R, KC_S)
+COMB(lshft_combo, OS_SHFT, KC_R, KC_S)
 COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)
-COMB(rshft_combo, KC_RSFT, KC_E, KC_I)
+COMB(rshft_combo, OS_SHFT, KC_E, KC_I)
 COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
 
 COMB(ent_combo, KC_ENT, KC_L, KC_U)
