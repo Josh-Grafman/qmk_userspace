@@ -94,9 +94,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
     [MSE] = LAYOUT_thirtyfour(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                       _______, _______, _______, _______
+        XXXXXXX, XXXXXXX, KC_SCRL, MS_BTN1, MS_BTN2,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        UNDO,    CUT,     COPY,    PASTE,   XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                       _______, XXXXXXX, XXXXXXX, XXXXXXX
     ),
   };
 
