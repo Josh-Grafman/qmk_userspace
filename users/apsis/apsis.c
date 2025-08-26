@@ -5,8 +5,6 @@
 
 #include "g/keymap_combo.h"
 
-#define HOME G(KC_LEFT)
-#define END G(KC_RGHT)
 #define FWD G(KC_RBRC)
 #define BACK G(KC_LBRC)
 #define TABL LCTL(KC_PGUP)
@@ -72,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_thirtyfour(
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_PGUP, HOME,    KC_UP,   END,     XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_PGUP, KC_HOME, KC_UP,   KC_END,  A(KC_F4),
         OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, XXXXXXX,         KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,
         UNDO,    CUT,     COPY,    PASTE,   QK_REP,          XXXXXXX, BKWRD,   KC_DEL,  XXXXXXX, XXXXXXX,
                                        _______, _______, _______, _______
