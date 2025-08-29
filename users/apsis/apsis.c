@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_thirtyfour(
-        XXXXXXX, XXXXXXX,BKWRD,  KC_DEL, XXXXXXX,          KC_PGUP, XXXXXXX, KC_UP,  XXXXXXX, A(KC_F4),
+        XXXXXXX, XXXXXXX, BKWRD,   KC_DEL,  XXXXXXX,         KC_PGUP, XXXXXXX, KC_UP,   XXXXXXX, A(KC_F4),
         OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, XXXXXXX,         KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,
-        UNDO,    CUT,     COPY,    PASTE,   XXXXXXX,          XXXXXXX, KC_HOME, KC_END, XXXXXXX, XXXXXXX,
+        UNDO,    CUT,     COPY,    PASTE,   XXXXXXX,         XXXXXXX, KC_HOME, KC_END,  XXXXXXX, XXXXXXX,
                                        _______, _______, _______, _______
     ),
 
