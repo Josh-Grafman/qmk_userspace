@@ -20,7 +20,7 @@
 #define PASTE LCTL(KC_V)
 #define BKWRD LCTL(KC_BACKSPACE)
 
-enum layers {
+public enum layers {
     BSE,
     NAV,
     SYM,
