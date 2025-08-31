@@ -1,6 +1,19 @@
 #include "config.h"
 #include QMK_KEYBOARD_H
 
+#ifndef LAYER_ENUM_H
+#define LAYER_ENUM_H
+
+enum layers {
+    BSE,
+    NAV,
+    SYM,
+    NUM,
+    MSE,
+};
+
+#endif /* LAYER_ENUM_H */
+
 bool led_update_user(led_t led_state) {
     static uint8_t num_state = 0;
     static uint8_t scrl_state = 0;
