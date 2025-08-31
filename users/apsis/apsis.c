@@ -20,13 +20,19 @@
 #define PASTE LCTL(KC_V)
 #define BKWRD LCTL(KC_BACKSPACE)
 
-public enum layers {
+#ifndef LAYER_ENUM_H
+#define LAYER_ENUM_H
+
+enum layers {
     BSE,
     NAV,
     SYM,
     NUM,
     MSE,
 };
+
+#endif /* LAYER_ENUM_H */
+
 
 enum keycodes {
     // Custom oneshot mod implementation with no timers.
