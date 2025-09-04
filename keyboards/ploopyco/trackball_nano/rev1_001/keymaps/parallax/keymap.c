@@ -18,13 +18,13 @@
  */
 #include QMK_KEYBOARD_H
 #include "ploopyco.h"
-#include "drag_scroll.h"
+#include "hires_dragscroll.h"
 
 // Dummy
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {{{ KC_NO }}};
 
 #define MOTION_DELAY 40
-#define IDLE_DELAY    3000
+#define IDLE_DELAY   3000
 
 typedef enum {
     STATE_IDLE,
@@ -37,7 +37,11 @@ static motion_state_t state = STATE_IDLE;
 static uint32_t state_timer = 0;
 
 bool led_update_user(led_t led_state) {
-    set_drag_scroll_scrolling(led_state.scroll_lock);
+    if(led_state.scroll_lock && !is_hires_dragscroll_on()) {
+        hires_dragscroll_on();
+    } else if (!led_state.scroll_lock && is_hires_dragscroll_on()) {
+        hires_dragscroll_off();
+    }
 
     // Sync our motion state to NumLock
     if (led_state.num_lock) {
@@ -103,7 +107,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
             break;
     }
 
-    return pointing_device_task_drag_scroll(mouse_report);
+    return mouse_report;
 }
 
 void suspend_power_down_user(void) {
