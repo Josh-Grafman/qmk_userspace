@@ -1,0 +1,3 @@
+[submodule "modules/eynsai"]
+	path = modules/eynsai
+	url = https://github.com/eynsai/qmk_modules.git
