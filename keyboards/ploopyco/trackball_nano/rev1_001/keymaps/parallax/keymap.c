@@ -23,7 +23,7 @@
 // Dummy
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {{{ KC_NO }}};
 
-#define MOTION_DELAY 40
+#define MOTION_DELAY 20
 #define IDLE_DELAY   3000
 
 typedef enum {
