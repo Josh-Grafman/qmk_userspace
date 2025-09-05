@@ -92,7 +92,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
             break;
 
         case STATE_ACTIVE:
-            if (!(dx || dy)) {
+            if (!(dx || dy) && !is_scrolllock_on()) {
                 state = STATE_STOPPING;
                 state_timer = timer_read();
             }
@@ -101,7 +101,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
         case STATE_STOPPING:
             if (dx || dy) {
                 state = STATE_ACTIVE; // resumed
-            } else if (!is_scrolllock_on() && timer_elapsed(state_timer) > IDLE_DELAY) {
+            } else if (timer_elapsed(state_timer) > IDLE_DELAY) {
                 // Idle confirmed → request NumLock OFF
                 if (is_numlock_on()) {
                     tap_code(KC_NUM);
