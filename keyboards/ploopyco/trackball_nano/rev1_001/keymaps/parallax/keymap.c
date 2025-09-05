@@ -63,6 +63,10 @@ static inline bool is_numlock_on(void) {
     return host_keyboard_led_state().num_lock;
 }
 
+static inline bool is_scrolllock_on(void) {
+    return host_keyboard_led_state().scroll_lock;
+}
+
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     int dx = mouse_report.x;
     int dy = mouse_report.y;
@@ -97,7 +101,7 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
         case STATE_STOPPING:
             if (dx || dy) {
                 state = STATE_ACTIVE; // resumed
-            } else if (timer_elapsed(state_timer) > IDLE_DELAY) {
+            } else if (!is_scrolllock_on() && timer_elapsed(state_timer) > IDLE_DELAY) {
                 // Idle confirmed → request NumLock OFF
                 if (is_numlock_on()) {
                     tap_code(KC_NUM);
