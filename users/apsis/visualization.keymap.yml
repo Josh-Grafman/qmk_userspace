@@ -4,7 +4,7 @@ draw_config:
   svg_extra_style: |
     rect.key, rect.combo { fill: #313244; stroke: none; }
     rect.combo { fill: #1e1e2e; }
-    rect.ghost { fill: #3132444D; }
+    rect.ghost { fill: #3132444D }
     svg.keymap { background-color: #1e1e2e; }
     .layer-DEF text, .layer-DEF use, .layer-DEF rect.held { fill: #cfbd99; }
     .layer-NAV text, .layer-NAV use, .layer-NAV rect.held { fill: #89b4fa; }
@@ -71,3 +71,57 @@ layers:
       $$mdi:keyboard-space$$,
       SYM,
     ]
+  NAV:
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - $$mdi:volume-minus$$
+    - $$mdi:skip-backward$$
+    - $$mdi:play-pause$$
+    - $$mdi:skip-forward$$
+    - $$mdi:volume-plus$$
+    - $$mdi:arrow-collapse-down$$
+    - $$mdi:arrow-collapse-left$$
+    - $$mdi:arrow-collapse-right$$
+    - $$mdi:arrow-collapse-up$$
+    - $$mdi:caps-lock$$
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - { t: $$mdi:apple-keyboard-command$$, type: mod }
+    - { t: $$mdi:apple-keyboard-option$$, type: mod }
+    - { t: $$mdi:apple-keyboard-shift$$, type: mod }
+    - { t: $$mdi:apple-keyboard-control$$, type: mod }
+    - $$mdi:keyboard-tab$$
+    - $$mdi:arrow-left$$
+    - $$mdi:arrow-down$$
+    - $$mdi:arrow-up$$
+    - $$mdi:arrow-right$$
+    - $$mdi:keyboard-esc$$
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - $$mdi:undo-variant$$
+    - $$mdi:content-cut$$
+    - $$mdi:content-copy$$
+    - $$mdi:content-paste$$
+    - $$mdi:repeat$$
+    - $$mdi:backspace$$
+    - $$mdi:backspace-outline$$
+    - $$mdi:backspace-reverse-outline$$
+    - $$mdi:printer-outline$$
+    - $$mdi:menu$$
+    - {t: "", type: "ghost"}
+    - { t: "", type: held }
+    - { t: ▽, type: trans }
+    - $$mdi:keyboard-return$$
+    - SYM
+    
