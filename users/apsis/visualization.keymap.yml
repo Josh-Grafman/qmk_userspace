@@ -124,4 +124,57 @@ layers:
     - { t: ▽, type: trans }
     - $$mdi:keyboard-return$$
     - SYM
+  SYM:
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - '\'
+    - "|"
+    - "_"
+    - "&"
+    - "%"
+    - "+"
+    - "-"
+    - "="
+    - "*"
+    - "/"
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - "<"
+    - ":"
+    - "{"
+    - "("
+    - "["
+    - "$"
+    - { t: $$mdi:apple-keyboard-control$$, type: mod }
+    - { t: $$mdi:apple-keyboard-shift$$, type: mod }
+    - { t: $$mdi:apple-keyboard-option$$, type: mod }
+    - { t: $$mdi:apple-keyboard-command$$, type: mod }
+    - {t: "", type: "ghost"}
+    - {t: "", type: "ghost"}
+    - ">"
+    - ";"
+    - "}"
+    - ")"
+    - "]"
+    - "€"
+    - "@"
+    - "#"
+    - "^"
+    - "~"
+    - {t: "", type: "ghost"}
+    - NAV
+    - { t: ▽, type: trans }
+    - { t: ▽, type: trans }
+    - { t: "", type: held }
     
