@@ -4,7 +4,7 @@ draw_config:
   svg_extra_style: |
     rect.key, rect.combo { fill: #313244; stroke: none; }
     rect.combo { fill: #1e1e2e; }
-    rect.ghost { fill: #ffffff; }
+    rect.ghost { fill: #3132444D; }
     svg.keymap { background-color: #1e1e2e; }
     .layer-DEF text, .layer-DEF use, .layer-DEF rect.held { fill: #cfbd99; }
     .layer-NAV text, .layer-NAV use, .layer-NAV rect.held { fill: #89b4fa; }
@@ -17,10 +17,7 @@ draw_config:
     rect:has(~ a[href="#SYM"]) { stroke: #a6e3a1; }
     a { visibility: hidden; }
 combos:
-  - { p: [0, 1], k: $$mdi:keyboard-esc$$, l: [DEF] }
   - { p: [20, 21], k: $$mdi:keyboard-return$$, l: [DEF] }
-
-  - { p: [6, 7], k: Å, l: [DEF] }
   - { p: [16, 17], k: Ä, l: [DEF] }
   - { p: [26, 27], k: Ö, l: [DEF] }
   
