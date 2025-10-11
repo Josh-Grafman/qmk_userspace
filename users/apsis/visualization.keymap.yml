@@ -22,14 +22,14 @@ combos:
   - { p: [15, 16], k: $$mdi:arrow-bottom-left-bold-outline$$, l: [DEF] }
   - { p: [26, 27], k: $$mdi:apple-keyboard-shift$$, l: [DEF] }
   - { p: [27, 28], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
-  - { p: [38, 39], k: "-", l: [DEF] }
+  - { p: [38, 39], k: {t: "-", s: "—"}, l: [DEF] }
   - { p: [39, 40], k: $$mdi:keyboard-tab$$, l: [DEF] }
   - { p: [19, 20], k: $$mdi:keyboard-return$$, l: [DEF] }
   - { p: [21, 22], k: $$mdi:sleep$$, l: [DEF] }
   - { p: [32, 33], k: $$mdi:apple-keyboard-shift$$, l: [DEF] }
   - { p: [31, 32], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
   - { p: [43, 44], k: $$mdi:backspace-outline$$, l: [DEF] }
-  - { p: [44, 45], k: "/", l: [DEF] }
+  - { p: [44, 45], k: {t: "-", s: "/" },  l: [DEF] }
   - { p: [28, 31], k: $$mdi:file-word-box-outline$$, l: [DEF] }
   
 layers:
