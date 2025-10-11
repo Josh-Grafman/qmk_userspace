@@ -15,6 +15,7 @@ draw_config:
     text.label { visibility: hidden; }
     rect:has(~ a[href="#NAV"]) { stroke: #89b4fa; }
     rect:has(~ a[href="#SYM"]) { stroke: #a6e3a1; }
+    rect:has(~ a[href="#NUM"]) { stroke: #fab387; }
     a { visibility: hidden; }
 combos:
   - { p: [13, 14], k: $$mdi:keyboard-esc$$, l: [DEF] }
@@ -37,14 +38,14 @@ layers:
     - [{t: "", type: "ghost"}, Q, W, F, P, G, J, L, U, Y, { t: "'", s: '"' }, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, A, R, S, T, D, H, N, E, I, O, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, Z, X, C, V, B, K, M, {t: ",", s: ";"}, {t: ".", s: ":"}, { t: "?", s: "!" }, {t: "", type: "ghost"}]
-    - [$$mdi:apple-keyboard-shift$$, NAV, SYM, $$mdi:keyboard-space$$]
+    - [NAV, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, SYM]
 
   NAV:
     - [{t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, $$mdi:volume-minus$$, $$mdi:skip-backward$$, $$mdi:play-pause$$, $$mdi:skip-forward$$, $$mdi:volume-plus$$, $$mdi:arrow-collapse-down$$, $$mdi:arrow-collapse-left$$, $$mdi:arrow-collapse-right$$, $$mdi:arrow-collapse-up$$, $$mdi:caps-lock$$, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, { t: $$mdi:apple-keyboard-command$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-control$$, type: mod }, $$mdi:keyboard-tab$$, $$mdi:arrow-left$$, $$mdi:arrow-down$$, $$mdi:arrow-up$$, $$mdi:arrow-right$$, $$mdi:keyboard-esc$$, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, $$mdi:undo-variant$$, $$mdi:content-cut$$, $$mdi:content-copy$$, $$mdi:content-paste$$, $$mdi:repeat$$, $$mdi:backspace$$, $$mdi:backspace-outline$$, $$mdi:backspace-reverse-outline$$, $$mdi:printer-outline$$, $$mdi:menu$$, {t: "", type: "ghost"}]
-    - [{ t: ▽, type: trans }, { t: "", type: held }, SYM, { t: ▽, type: trans }]
+    - [{ t: "", type: held }, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, NUM]
 
   SYM:
     - [{t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}]
@@ -58,4 +59,4 @@ layers:
     - [{t: "", type: "ghost"}, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, { t: $$mdi:apple-keyboard-command$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-control$$, type: mod }, F11, F12, { t: $$mdi:apple-keyboard-control$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-command$$, type: mod }, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, {t: "", type: "ghost"}]
-    - [{ t: ▽, type: trans }, { t: "", type: held }, {t: "", type: held}, { t: ▽, type: trans }]
+    - [{ t: "", type: held }, $$mdi:apple-keyboard-shift$$,  $$mdi:keyboard-space$$, {t: "", type: held}]
