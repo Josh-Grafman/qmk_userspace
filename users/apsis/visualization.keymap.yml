@@ -21,6 +21,8 @@ combos:
   - { p: [15, 16], k: $$mdi:keyboard-return$$, l: [DEF] }
   - { p: [26, 27], k: $$mdi:apple-keyboard-shift$$, l: [DEF] }
   - { p: [27, 28], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
+  - { p: [38, 39], k: "-", l: [DEF] }
+  - { p: [39, 40], k: $$mdi:keyboard-tab$$, l: [DEF] }
   
 layers:
   DEF:
