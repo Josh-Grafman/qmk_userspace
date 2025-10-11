@@ -8,13 +8,13 @@ draw_config:
     svg.keymap { background-color: #1e1e2e; }
     .layer-DEF text, .layer-DEF use, .layer-DEF rect.held { fill: #cfbd99; }
     .layer-NAV text, .layer-NAV use, .layer-NAV rect.held { fill: #89b4fa; }
-    .layer-SYM text, .layer-SYM use, .layer-SYM rect.held { fill: #a6e3a1; }
+    .layer-SYM text, .layer-SYM use, .layer-SYM rect.held { fill: #FF787A; }
     .layer-NUM text, .layer-NUM use, .layer-NUM rect.held { fill: #fab387; }
     text.held { fill: #1e1e2e; }
     rect.mod { fill: #181825; }
     text.label { visibility: hidden; }
     rect:has(~ a[href="#NAV"]) { stroke: #89b4fa; }
-    rect:has(~ a[href="#SYM"]) { stroke: #a6e3a1; }
+    rect:has(~ a[href="#SYM"]) { stroke: #FF787A; }
     rect:has(~ a[href="#NUM"]) { stroke: #fab387; }
     a { visibility: hidden; }
 combos:
