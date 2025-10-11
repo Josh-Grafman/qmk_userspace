@@ -43,6 +43,7 @@ tn - capsword
 COMB(esc_combo, KC_ESC, KC_Q, KC_W)
 COMB(slep_combo, KC_SLEP, KC_Y, KC_QUOT) 
 COMB(bspc_combo, KC_BSPC, KC_M, KC_COMM)
+COMB(del_combo, KC_DELETE, KC_C, KC_V)
 
 COMB(lshft_combo, KC_LSFT, KC_R, KC_S)
 COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)
@@ -51,7 +52,7 @@ COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
 
 COMB(ent_combo, KC_ENT, KC_L, KC_U)
 COMB(lf_combo, LSFT(KC_ENTER), KC_F, KC_P)
-COMB(tab_combo, KC_TAB, KC_C, KC_V)
+COMB(tab_combo, KC_TAB, KC_U, KC_Y)
 
 COMB(dash_combo, KC_MINS, KC_X, KC_C)
 COMB(slsh_combo, KC_SLSH, KC_DOT, KC_COMM)
