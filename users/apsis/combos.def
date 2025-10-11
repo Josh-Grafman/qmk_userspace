@@ -9,6 +9,7 @@
 8. dash => em dash
 9. esc
 10. sleep
+11. delete
 
 == Base ==
 = Left =
@@ -18,14 +19,14 @@ rs - lshift
 xc - dash
 fp - line feed
 st - lcontrol
-cv - tab
+cv - delete
 wfp
 rst
 xcv
 
 = Right =
 y' - sleep
-uy
+uy - tab
 ei - rshift
 ,. - underscore
 lu - enter
