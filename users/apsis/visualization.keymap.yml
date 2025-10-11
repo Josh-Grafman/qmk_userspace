@@ -23,6 +23,7 @@ combos:
   - { p: [27, 28], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
   - { p: [38, 39], k: "-", l: [DEF] }
   - { p: [39, 40], k: $$mdi:keyboard-tab$$, l: [DEF] }
+  - { p: [21, 22], k: $$mdi:sleep$$, l: [DEF] }
   
 layers:
   DEF:
@@ -37,7 +38,7 @@ layers:
     - [{t: "", type: "ghost"}, $$mdi:volume-minus$$, $$mdi:skip-backward$$, $$mdi:play-pause$$, $$mdi:skip-forward$$, $$mdi:volume-plus$$, $$mdi:arrow-collapse-down$$, $$mdi:arrow-collapse-left$$, $$mdi:arrow-collapse-right$$, $$mdi:arrow-collapse-up$$, $$mdi:caps-lock$$, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, { t: $$mdi:apple-keyboard-command$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-control$$, type: mod }, $$mdi:keyboard-tab$$, $$mdi:arrow-left$$, $$mdi:arrow-down$$, $$mdi:arrow-up$$, $$mdi:arrow-right$$, $$mdi:keyboard-esc$$, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, $$mdi:undo-variant$$, $$mdi:content-cut$$, $$mdi:content-copy$$, $$mdi:content-paste$$, $$mdi:repeat$$, $$mdi:backspace$$, $$mdi:backspace-outline$$, $$mdi:backspace-reverse-outline$$, $$mdi:printer-outline$$, $$mdi:menu$$, {t: "", type: "ghost"}]
-    - [{ t: ▽, type: trans }, { t: "", type: held }, SYM, $$mdi:keyboard-space$$]
+    - [{ t: ▽, type: trans }, { t: "", type: held }, SYM, { t: ▽, type: trans }]
 
   SYM:
     - [{t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}]
