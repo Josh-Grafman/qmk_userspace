@@ -43,8 +43,8 @@ layers:
   NAV:
     - [{t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, $$mdi:volume-minus$$, $$mdi:skip-backward$$, $$mdi:play-pause$$, $$mdi:skip-forward$$, $$mdi:volume-plus$$, $$mdi:arrow-collapse-down$$, $$mdi:arrow-collapse-left$$, $$mdi:arrow-collapse-right$$, $$mdi:arrow-collapse-up$$, $$mdi:caps-lock$$, {t: "", type: "ghost"}]
-    - [{t: "", type: "ghost"}, { t: $$mdi:apple-keyboard-command$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-control$$, type: mod }, $$mdi:keyboard-tab$$, $$mdi:arrow-left$$, $$mdi:arrow-down$$, $$mdi:arrow-up$$, $$mdi:arrow-right$$, $$mdi:keyboard-esc$$, {t: "", type: "ghost"}]
-    - [{t: "", type: "ghost"}, $$mdi:undo-variant$$, $$mdi:content-cut$$, $$mdi:content-copy$$, $$mdi:content-paste$$, $$mdi:repeat$$, $$mdi:backspace$$, $$mdi:backspace-outline$$, $$mdi:backspace-reverse-outline$$, $$mdi:printer-outline$$, $$mdi:menu$$, {t: "", type: "ghost"}]
+    - [{t: "", type: "ghost"}, { t: $$mdi:apple-keyboard-command$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-control$$, type: mod }, "", $$mdi:arrow-collapse-down$$, $$mdi:arrow-left$$, $$mdi:arrow-down$$, $$mdi:arrow-right$$, "", {t: "", type: "ghost"}]
+    - [{t: "", type: "ghost"}, $$mdi:undo-variant$$, $$mdi:content-cut$$, $$mdi:content-copy$$, $$mdi:content-paste$$, "", "", "", "", "", "", {t: "", type: "ghost"}]
     - [{ t: "", type: held }, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, NUM]
 
   SYM:
