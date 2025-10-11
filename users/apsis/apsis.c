@@ -47,7 +47,7 @@ enum keycodes {
 const key_override_t ques_exlm_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUES, KC_EXLM); // S-? -> !
 const key_override_t comm_semi_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN); // S-, -> ;
 const key_override_t dot_coln_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLN);   // S-. -> :
-const key_override_t slsh_unds_override = ko_make_basic(MOD_MASK_SHIFT, KC_SLSH, KC_UNDS); // S-/ -> _
+const key_override_t unds_slsh_override = ko_make_basic(MOD_MASK_SHIFT, KC_UNDS, KC_SLSH); // S-_ -> /
 const key_override_t lcbr_rcbr_override = ko_make_basic(MOD_MASK_SHIFT, KC_LCBR, KC_RCBR); // S-{ -> }
 const key_override_t lprn_rprn_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_RPRN); // S-( -> )
 const key_override_t lbrc_rbrc_override = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_RBRC); // S-[ -> ]
@@ -57,7 +57,7 @@ const key_override_t *key_overrides[] = {
 	&ques_exlm_override,
     &comm_semi_override,
     &dot_coln_override,
-    &slsh_unds_override,
+    &unds_slsh_override,
     &lcbr_rcbr_override,
     &lprn_rprn_override,
     &lbrc_rbrc_override
