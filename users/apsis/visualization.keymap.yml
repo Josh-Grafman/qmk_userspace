@@ -19,7 +19,7 @@ draw_config:
     a { visibility: hidden; }
 combos:
   - { p: [13, 14], k: $$mdi:keyboard-esc$$, l: [DEF] }
-  - { p: [15, 16], k: $$mdi:arrow-bottom-left-bold-box$$, l: [DEF] }
+  - { p: [15, 16], k: $$mdi:arrow-bottom-left-bold-outline$$, l: [DEF] }
   - { p: [26, 27], k: $$mdi:apple-keyboard-shift$$, l: [DEF] }
   - { p: [27, 28], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
   - { p: [38, 39], k: "-", l: [DEF] }
@@ -28,9 +28,9 @@ combos:
   - { p: [21, 22], k: $$mdi:sleep$$, l: [DEF] }
   - { p: [32, 33], k: $$mdi:apple-keyboard-shift$$, l: [DEF] }
   - { p: [31, 32], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
-  - { p: [43, 44], k: $$mdi:backspace$$, l: [DEF] }
+  - { p: [43, 44], k: $$mdi:backspace-outline$$, l: [DEF] }
   - { p: [44, 45], k: "/", l: [DEF] }
-  - { p: [28, 31], k: $$mdi:file-word-box$$, l: [DEF] }
+  - { p: [28, 31], k: $$mdi:file-word-box-outline$$, l: [DEF] }
   
 layers:
   DEF:
