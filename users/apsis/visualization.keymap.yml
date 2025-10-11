@@ -29,6 +29,7 @@ combos:
   - { p: [31, 32], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
   - { p: [43, 44], k: $$mdi:backspace$$, l: [DEF] }
   - { p: [44, 45], k: "/", l: [DEF] }
+  - { p: [28, 31], k: $$mdi:file-word-box$$, l: [DEF] }
   
 layers:
   DEF:
