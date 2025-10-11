@@ -5,7 +5,7 @@
 4. enter
 5. tab
 6. shift enter
-7. slash => underscore
+7. underscore => slash
 8. dash => em dash
 9. esc
 10. sleep
@@ -27,7 +27,7 @@ xcv
 y' - sleep
 uy
 ei - rshift
-,. - slash
+,. - underscore
 lu - enter
 ne - rcontrol
 m, - backspace
