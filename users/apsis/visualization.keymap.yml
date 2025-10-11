@@ -18,6 +18,9 @@ draw_config:
     a { visibility: hidden; }
 combos:
   - { p: [13, 14], k: $$mdi:keyboard-esc$$, l: [DEF] }
+  - { p: [15, 16], k: $$mdi:keyboard-return$$, l: [DEF] }
+  - { p: [26, 27], k: $$mdi:apple-keyboard-shift$$, l: [DEF] }
+  - { p: [27, 28], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
   
 layers:
   DEF:
