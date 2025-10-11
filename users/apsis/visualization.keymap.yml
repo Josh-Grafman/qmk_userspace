@@ -52,7 +52,7 @@ layers:
     - [{t: "", type: "ghost"}, '\', "|", "_", "&", "%", "+", "-", "=", "*", "/", {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, "<", ":", "{", "(", "[", "$", { t: $$mdi:apple-keyboard-control$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-command$$, type: mod }, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, ">", ";", "}", ")", "]", "€", "@", "#", "^", "~", {t: "", type: "ghost"}]
-    - [{ t: ▽, type: trans }, NAV, { t: "", type: held }, { t: ▽, type: trans }]
+    - [NUM, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, { t: "", type: held }]
 
   NUM:
     - [{t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}]
