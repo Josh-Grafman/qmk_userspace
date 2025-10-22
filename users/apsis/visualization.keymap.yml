@@ -19,6 +19,8 @@ draw_config:
     a { visibility: hidden; }
 combos:
   - { p: [13, 14], k: $$mdi:keyboard-esc$$, l: [DEF] }
+  - { p: [14, 15], k: $$mdi:volume-minus$$, l: [NAV] }
+  - { p: [15, 16], k: $$mdi:volume-plus$$, l: [NAV] }
   - { p: [15, 16], k: $$mdi:arrow-bottom-left-bold-outline$$, l: [DEF]}
   - { p: [26, 27], k: $$mdi:apple-keyboard-shift$$, l: [DEF] }
   - { p: [27, 28], k: $$mdi:apple-keyboard-control$$, l: [DEF] }
@@ -43,7 +45,7 @@ layers:
 
   NAV:
     - [{t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}, {t: "", type: "ghost"}]
-    - [{t: "", type: "ghost"}, $$mdi:volume-minus$$, $$mdi:skip-backward$$, $$mdi:play-pause$$, $$mdi:skip-forward$$, $$mdi:volume-plus$$, $$mdi:arrow-collapse-up$$, "", $$mdi:arrow-up$$, "", $$mdi:close$$, {t: "", type: "ghost"}]
+    - [{t: "", type: "ghost"}, "", $$mdi:skip-backward$$, $$mdi:play-pause$$, $$mdi:skip-forward$$, "", $$mdi:arrow-collapse-up$$, $$mdi:page-first$$, $$mdi:arrow-up$$, $$mdi:page-last$$, $$mdi:close$$, {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, { t: $$mdi:apple-keyboard-command$$, type: mod }, { t: $$mdi:apple-keyboard-option$$, type: mod }, { t: $$mdi:apple-keyboard-shift$$, type: mod }, { t: $$mdi:apple-keyboard-control$$, type: mod }, "", $$mdi:arrow-collapse-down$$, $$mdi:arrow-left$$, $$mdi:arrow-down$$, $$mdi:arrow-right$$, "", {t: "", type: "ghost"}]
     - [{t: "", type: "ghost"}, $$mdi:undo-variant$$, $$mdi:content-cut$$, $$mdi:content-copy$$, $$mdi:content-paste$$, "", "", $$mdi:arrow-collapse-left$$, $$mdi:arrow-collapse-right$$, "", "", {t: "", type: "ghost"}]
     - [{ t: "", type: held }, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, NUM]
