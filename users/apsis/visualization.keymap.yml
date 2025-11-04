@@ -2,16 +2,16 @@ layout: { qmk_keyboard: zsa/voyager }
 draw_config:
   footer_text: ""
   svg_extra_style: |
-    rect.key, rect.combo { fill: #313244; stroke: none; }
-    rect.combo { fill: #1e1e2e; }
-    rect.ghost { fill: #3132444D; }
-    svg.keymap { background-color: #1e1e2e; }
+    rect.key, rect.combo { fill: #2b2b2b; stroke: none; }
+    rect.combo { fill: #222222; }
+    rect.ghost { fill: #1c1c1c; }
+    svg.keymap { background-color: #121212; }
     .layer-DEF text, .layer-DEF use, .layer-DEF rect.held { fill: #cfbd99; }
     .layer-NAV text, .layer-NAV use, .layer-NAV rect.held { fill: #89b4fa; }
     .layer-SYM text, .layer-SYM use, .layer-SYM rect.held { fill: #FF787A; }
     .layer-NUM text, .layer-NUM use, .layer-NUM rect.held { fill: #fab387; }
-    text.held { fill: #1e1e2e; }
-    rect.mod { fill: #181825; }
+    text.held { fill: #1e1e1e; }
+    rect.mod { fill: #181818; }
     text.label { visibility: hidden; }
     rect:has(~ a[href="#NAV"]) { stroke: #89b4fa; }
     rect:has(~ a[href="#SYM"]) { stroke: #FF787A; }
