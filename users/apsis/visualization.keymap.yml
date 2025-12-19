@@ -16,8 +16,8 @@ draw_config:
         rect.mod { fill: #181818; }
         text.label { visibility: hidden; }
         rect:has(~ a[href="#NAV"]) { stroke: #ff7364; }
-        rect:has(~ a[href="#SYM"]) { stroke: #FF787A; }
-        rect:has(~ a[href="#NUM"]) { stroke: #fab387; }
+        rect:has(~ a[href="#SYM"]) { stroke: #6f97d8; }
+        rect:has(~ a[href="#NUM"]) { stroke: #FCD662; }
         a { visibility: hidden; }
 combos:
     - { p: [13, 14], k: $$mdi:keyboard-esc$$, l: [DEF] }
@@ -112,7 +112,7 @@ layers:
         - [
               { t: "", type: "ghost" },
               EXT,
-              $$mdi:table-multiple$$,
+              $$mdi:file-table-box-multiple$$,
               $$mdi:table-arrow-left$$,
               $$mdi:table-arrow-right$$,
               "",
@@ -125,16 +125,16 @@ layers:
           ]
         - [
               { t: "", type: "ghost" },
-              { t: $$mdi:apple-keyboard-command$$, type: mod },
+              { t: $$mdi:microsoft$$, type: mod },
               { t: $$mdi:apple-keyboard-option$$, type: mod },
               { t: $$mdi:apple-keyboard-shift$$, type: mod },
               { t: $$mdi:apple-keyboard-control$$, type: mod },
-              "",
+              $$mdi:table-multiple$$,
               $$mdi:arrow-collapse-down$$,
               $$mdi:arrow-left$$,
               $$mdi:arrow-down$$,
               $$mdi:arrow-right$$,
-              "",
+              $$mdi:microsoft$$,
               { t: "", type: "ghost" },
           ]
         - [
@@ -143,11 +143,11 @@ layers:
               $$mdi:content-cut$$,
               $$mdi:content-copy$$,
               $$mdi:content-paste$$,
-              "",
+              $$mdi:table-refresh$$,
               "",
               $$mdi:arrow-collapse-left$$,
               $$mdi:arrow-collapse-right$$,
-              "",
+              $$mdi:alpha-i-box-outline$$,
               "",
               { t: "", type: "ghost" },
           ]
@@ -176,43 +176,43 @@ layers:
         - [
               { t: "", type: "ghost" },
               '\',
-              "|",
-              "_",
-              "&",
+              "[",
+              "{",
+              "(",
               "%",
-              "+",
-              "-",
-              "=",
-              "*",
-              "/",
+              "`",
+              ")",
+              "}",
+              "]",
+              "~",
               { t: "", type: "ghost" },
           ]
         - [
               { t: "", type: "ghost" },
-              "<",
-              "",
-              "{",
-              "(",
-              "[",
+              "-",
+              "/",
+              "+",
+              "=",
+              "^",
               "$",
               { t: $$mdi:apple-keyboard-control$$, type: mod },
               { t: $$mdi:apple-keyboard-shift$$, type: mod },
               { t: $$mdi:apple-keyboard-option$$, type: mod },
-              { t: $$mdi:apple-keyboard-command$$, type: mod },
+              { t: $$mdi:microsoft$$, type: mod },
               { t: "", type: "ghost" },
           ]
         - [
               { t: "", type: "ghost" },
-              ">",
-              "",
-              "}",
-              ")",
-              "]",
-              "",
               "@",
               "#",
-              "^",
-              "~",
+              "&",
+              "<",
+              "*",
+              "|",
+              ">",
+              { t: ",", s: ";" },
+              { t: ".", s: ":" },
+              { t: "?", s: "!" },
               { t: "", type: "ghost" },
           ]
         - [
@@ -253,7 +253,7 @@ layers:
           ]
         - [
               { t: "", type: "ghost" },
-              { t: $$mdi:apple-keyboard-command$$, type: mod },
+              { t: $$mdi:microsoft$$, type: mod },
               { t: $$mdi:apple-keyboard-option$$, type: mod },
               { t: $$mdi:apple-keyboard-shift$$, type: mod },
               { t: $$mdi:apple-keyboard-control$$, type: mod },
@@ -262,7 +262,7 @@ layers:
               { t: $$mdi:apple-keyboard-control$$, type: mod },
               { t: $$mdi:apple-keyboard-shift$$, type: mod },
               { t: $$mdi:apple-keyboard-option$$, type: mod },
-              { t: $$mdi:apple-keyboard-command$$, type: mod },
+              { t: $$mdi:microsoft$$, type: mod },
               { t: "", type: "ghost" },
           ]
         - [
@@ -337,10 +337,10 @@ layers:
               "",
               "",
               "",
-              $$tabler:brightness-down$$,
+              $$fa:regular/lightbulb$$,
               "",
               "",
               "",
               { t: "", type: "ghost" },
           ]
-        - [NAV, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, NUM]
+        - [NAV, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, SYM]
