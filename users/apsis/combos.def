@@ -1,60 +1,18 @@
-/* 
-1. shift
-2. control
-3. backspace
-4. enter
-5. tab
-6. shift enter
-7. underscore => slash
-8. dash => em dash
-9. esc
-10. sleep
-11. delete
-
-== Base ==
-= Left =
-qw - esc
-wf
-rs - lshift
-xc - dash
-fp - line feed
-st - lcontrol
-cv - delete
-wfp
-rst
-xcv
-
-= Right =
-y' - sleep
-uy - tab
-ei - rshift
-,. - underscore
-lu - enter
-ne - rcontrol
-m, - backspace
-luy
-nei
-m,.
-
-= Both =
-tn - capsword
-*/
-
 COMB(esc_combo, KC_ESC, KC_Q, KC_W)
-COMB(slep_combo, KC_SLEP, KC_Y, KC_QUOT) 
 COMB(bspc_combo, KC_BSPC, KC_M, KC_COMM)
 COMB(del_combo, KC_DELETE, KC_C, KC_V)
 
-COMB(lshft_combo, KC_LSFT, KC_R, KC_S)
-COMB(lctrl_combo, KC_LCTL, KC_S, KC_T)
-COMB(rshft_combo, KC_RSFT, KC_E, KC_I)
-COMB(rctrl_combo, KC_RCTL, KC_N, KC_E)
+COMB(lshft_combo, OS_SHFT, KC_R, KC_S)
+COMB(lctrl_combo, OS_CTRL, KC_S, KC_T)
+COMB(rshft_combo, OS_SHFT, KC_E, KC_I)
+COMB(rctrl_combo, OS_CTRL, KC_N, KC_E)
 
 COMB(ent_combo, KC_ENT, KC_L, KC_U)
 COMB(lf_combo, LSFT(KC_ENTER), KC_F, KC_P)
 COMB(tab_combo, KC_TAB, KC_U, KC_Y)
 
-COMB(dash_combo, KC_MINS, KC_X, KC_C)
-COMB(slsh_combo, KC_SLSH, KC_DOT, KC_COMM)
+COMB(unds_combo, XC_UNDS, KC_X, KC_C)
+COMB(dash_combo, KC_MINS, KC_DOT, KC_COMM)
 
-COMB(capsw_combo, CW_TOGG, KC_T, KC_N)
+COMB(capsw_combo, CW_TOGG, KC_D, KC_H)
+

@@ -5,12 +5,12 @@
 
 #include "g/keymap_combo.h"
 
-#define FWD G(KC_RBRC)
-#define BACK G(KC_LBRC)
-#define TABL LCTL(KC_PGUP)
-#define TABR LCTL(KC_PGDN)
-#define SPCL A(G(KC_LEFT))
-#define SPC_R A(G(KC_RGHT))
+#define FWD    G(KC_RBRC)
+#define BACK   G(KC_LBRC)
+#define TABL   LCTL(KC_PGUP)
+#define TABR   LCTL(KC_PGDN)
+#define SPCL   A(G(KC_LEFT))
+#define SPC_R  A(G(KC_RGHT))
 #define LA_SYM MO(SYM)
 #define LA_NAV MO(NAV)
 
@@ -24,7 +24,7 @@
 #define LAYER_ENUM_H
 
 enum layers {
-    BSE,
+    DEF,
     NAV,
     SYM,
     NUM,
@@ -33,31 +33,29 @@ enum layers {
 
 #endif /* LAYER_ENUM_H */
 
-
 enum keycodes {
     // Custom oneshot mod implementation with no timers.
     OS_SHFT = SAFE_RANGE,
     OS_CTRL,
     OS_ALT,
     OS_GUI,
-
+    XC_UNDS,
     SW_WIN,  // Switch to next window         (cmd-tab)
 };
 
 const key_override_t ques_exlm_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUES, KC_EXLM); // S-? -> !
 const key_override_t comm_semi_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN); // S-, -> ;
 const key_override_t dot_coln_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLN);   // S-. -> :
-const key_override_t unds_slsh_override = ko_make_basic(MOD_MASK_SHIFT, KC_UNDS, KC_SLSH); // S-_ -> /
+const key_override_t dash_slsh_override = ko_make_basic(MOD_MASK_SHIFT, KC_MINS, KC_SLSH); // S-- > /
 const key_override_t lcbr_rcbr_override = ko_make_basic(MOD_MASK_SHIFT, KC_LCBR, KC_RCBR); // S-{ -> }
 const key_override_t lprn_rprn_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_RPRN); // S-( -> )
 const key_override_t lbrc_rbrc_override = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_RBRC); // S-[ -> ]
-// TODO: add dash -> em dash
 
 const key_override_t *key_overrides[] = {
-	&ques_exlm_override,
+    &ques_exlm_override,
     &comm_semi_override,
     &dot_coln_override,
-    &unds_slsh_override,
+    &dash_slsh_override,
     &lcbr_rcbr_override,
     &lprn_rprn_override,
     &lbrc_rbrc_override
@@ -66,19 +64,17 @@ const key_override_t *key_overrides[] = {
 /*
 wishlist
 
-- media keys (back play skip)
-- vol up/down
 - ins
 - TABL/TABR
 - MEH/HYPER
 */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [BSE] = LAYOUT_thirtyfour(
+    [DEF] = LAYOUT_thirtyfour(
         KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,            KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT,
         KC_A,    KC_R,    KC_S,    KC_T,    KC_D,            KC_H,    KC_N,    KC_E,    KC_I,    KC_O,
         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,            KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_QUES,
-                                       KC_LSFT, LA_NAV,  LA_SYM,  KC_SPC
+                                       LA_NAV,  KC_LSFT, KC_SPC,  LA_SYM
     ),
 
     [NAV] = LAYOUT_thirtyfour(
@@ -101,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F7,   KC_F5,   KC_F3,   KC_F1,   KC_F9,           KC_F8,   KC_F12,  KC_F2,   KC_F4,   KC_F6,
                                        _______, _______, _______, _______
     ),
-    
+
     [MSE] = LAYOUT_thirtyfour(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, KC_SCRL, MS_BTN1, MS_BTN2,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -143,6 +139,20 @@ oneshot_state os_alt_state = os_up_unqueued;
 oneshot_state os_gui_state = os_up_unqueued;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (keycode == XC_UNDS) {
+        if (record->event.pressed) {
+            uint8_t mods = get_mods();
+            if (mods & MOD_MASK_SHIFT) {
+                unregister_mods(mods & MOD_MASK_SHIFT);
+                send_unicode_hex_string("2014");
+                register_mods(mods & MOD_MASK_SHIFT);
+            } else {
+                tap_code(KC_UNDS);
+            }
+        }
+        return false;
+    }
+
     update_swapper(
         &sw_win_active, KC_LGUI, KC_TAB, SW_WIN,
         keycode, record
@@ -171,3 +181,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, SYM, NAV, NUM);
 }
+
