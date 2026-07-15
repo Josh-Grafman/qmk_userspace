@@ -3,6 +3,7 @@ VPATH += keyboards/gboards
 
 INTROSPECTION_KEYMAP_C = apsis.c
 SRC += oneshot.c
+SRC += oneshot_fn.c
 SRC += swapper.c
 
 KEY_OVERRIDE_ENABLE = yes
