@@ -1,10 +1,9 @@
 #include QMK_KEYBOARD_H
 
+#include "apsis.h"
 #include "oneshot.h"
 #include "oneshot_fn.h"
 #include "swapper.h"
-
-#include "g/keymap_combo.h"
 
 #define FWD    G(KC_RBRC)
 #define BACK   G(KC_LBRC)
@@ -24,30 +23,7 @@
 #define BKWRD LCTL(KC_BACKSPACE)
 #define QUIT  A(KC_F4)
 
-#ifndef LAYER_ENUM_H
-#define LAYER_ENUM_H
-
-enum layers {
-    DEF,
-    NAV,
-    SYM,
-    NUM,
-    EXT,
-    MSE,
-};
-
-#endif /* LAYER_ENUM_H */
-
-enum keycodes {
-    // Custom oneshot mod implementation with no timers.
-    OS_SHFT = SAFE_RANGE,
-    OS_CTRL,
-    OS_ALT,
-    OS_GUI,
-    OS_FN,
-    XC_UNDS,
-    SW_WIN,  // Switch to next window         (cmd-tab)
-};
+#include "g/keymap_combo.h"
 
 const key_override_t ques_exlm_override = ko_make_basic(MOD_MASK_SHIFT, KC_QUES, KC_EXLM); // S ? -> !
 const key_override_t comm_semi_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN); // S , -> ;
@@ -186,10 +162,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             uint8_t mods = get_mods();
             if (mods & MOD_MASK_SHIFT) {
                 unregister_mods(mods & MOD_MASK_SHIFT);
-                send_unicode_hex_string("2014");
+                send_unicode_string("\xE2\x80\x94");
                 register_mods(mods & MOD_MASK_SHIFT);
             } else {
-                tap_code(KC_UNDS);
+                tap_code16(KC_UNDS);
             }
         }
         return false;

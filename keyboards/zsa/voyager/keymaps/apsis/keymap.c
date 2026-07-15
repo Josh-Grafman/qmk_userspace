@@ -1,19 +1,7 @@
 #include "config.h"
 #include QMK_KEYBOARD_H
 
-#ifndef LAYER_ENUM_H
-#define LAYER_ENUM_H
-
-enum layers {
-    DEF,
-    NAV,
-    SYM,
-    NUM,
-    EXT,
-    MSE,
-};
-
-#endif /* LAYER_ENUM_H */
+#include "users/apsis/apsis.h"
 
 #ifdef RGB_MATRIX_ENABLE
 extern rgb_config_t rgb_matrix_config;
