@@ -92,7 +92,7 @@ layers:
               { t: "?", s: "!" },
               { t: "", type: "ghost" },
           ]
-        - [NAV, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, SYM]
+        - [$$mdi:apple-keyboard-shift$$, NAV, SYM, $$mdi:keyboard-space$$]
 
     NAV:
         - [
@@ -343,4 +343,4 @@ layers:
               "",
               { t: "", type: "ghost" },
           ]
-        - [NAV, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-space$$, SYM]
+        - [{ t: "", type: trans }, { t: "", type: trans }, { t: "", type: trans }, { t: "", type: trans }]

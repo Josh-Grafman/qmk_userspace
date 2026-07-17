@@ -22,19 +22,19 @@ bool rgb_matrix_indicators_user(void) {
 
     switch (biton32(layer_state)) {
     case DEF:
-        set_layer_color(0xFB, 0x9B, 0x60);
+        set_layer_color(0xFF, 0x7A, 0x1A);
         break;
     case NAV:
-        set_layer_color(0xFF, 0x73, 0x64);
+        set_layer_color(0xFF, 0x3B, 0x30);
         break;
     case SYM:
-        set_layer_color(0x6F, 0x97, 0xD8);
+        set_layer_color(0x2F, 0x6B, 0xFF);
         break;
     case NUM:
-        set_layer_color(0xFC, 0xD6, 0x62);
+        set_layer_color(0xFF, 0xC7, 0x00);
         break;
     case EXT:
-        set_layer_color(0xD9, 0x55, 0x55);
+        set_layer_color(0xFF, 0x2D, 0x55);
         break;
     case MSE:
         set_layer_color(0x9A, 0x9A, 0x9A);
@@ -57,6 +57,9 @@ bool led_update_user(led_t led_state) {
     if (num_state != led_state.num_lock) {
         if (led_state.num_lock) {
             layer_on(MSE);
+            if (!scrl_state) {
+                tap_code(KC_SCRL);
+            }
         } else {
             layer_off(MSE);
             if (scrl_state) {
