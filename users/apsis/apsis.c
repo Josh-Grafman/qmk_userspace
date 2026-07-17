@@ -14,7 +14,6 @@
 #define SSHOT  G(S(KC_S))
 #define LA_SYM MO(SYM)
 #define LA_NAV MO(NAV)
-#define LA_EXT MO(EXT)
 
 #define UNDO  LCTL(KC_Z)
 #define CUT   LCTL(KC_X)
@@ -54,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_thirtyfour(
-        LA_EXT,  XXXXXXX, XXXXXXX, BKWRD,   XXXXXXX,         KC_PGUP, XXXXXXX, KC_UP,   XXXXXXX, QUIT,
+        TG(EXT), XXXXXXX, XXXXXXX, BKWRD,   XXXXXXX,         KC_PGUP, XXXXXXX, KC_UP,   XXXXXXX, QUIT,
         OS_GUI,  OS_ALT,  OS_SHFT, OS_CTRL, XXXXXXX,         KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,
         UNDO,    CUT,     COPY,    PASTE,   XXXXXXX,         XXXXXXX, KC_HOME, KC_END,  XXXXXXX, XXXXXXX,
                                        _______, _______, _______, _______
@@ -93,7 +92,6 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     case LA_SYM:
     case LA_NAV:
-    case LA_EXT:
         return true;
     default:
         return false;
@@ -104,7 +102,6 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
     case LA_SYM:
     case LA_NAV:
-    case LA_EXT:
     case KC_LSFT:
     case OS_SHFT:
     case OS_CTRL:
