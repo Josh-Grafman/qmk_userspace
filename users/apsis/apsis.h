@@ -21,6 +21,7 @@ enum keycodes {
     OS_ALT,
     OS_GUI,
     OS_FN,
+    SC_HOLD,
     XC_UNDS,
     SW_WIN,  // Switch to next window         (cmd-tab)
 };

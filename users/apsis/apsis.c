@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [MSE] = LAYOUT_thirtyfour(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, KC_SCRL, MS_BTN1, MS_BTN2,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, SC_HOLD, XXXXXXX, MS_BTN1, MS_BTN2,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         UNDO,    CUT,     COPY,    PASTE,   XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                        KC_NUM,  _______, XXXXXXX, KC_NUM
     ),
@@ -118,6 +118,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
 }
 
 bool sw_win_active = false;
+bool sc_hold_active = false;
 
 oneshot_state os_shft_state = os_up_unqueued;
 oneshot_state os_ctrl_state = os_up_unqueued;
@@ -157,6 +158,23 @@ uint16_t oneshot_fn_press_user(uint16_t keycode) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (keycode == SC_HOLD) {
+        led_t led_state = host_keyboard_led_state();
+
+        if (record->event.pressed) {
+            if (!led_state.scroll_lock) {
+                tap_code(KC_SCRL);
+            }
+            sc_hold_active = true;
+        } else {
+            if (sc_hold_active && led_state.scroll_lock) {
+                tap_code(KC_SCRL);
+            }
+            sc_hold_active = false;
+        }
+        return false;
+    }
+
     if (keycode == XC_UNDS) {
         if (record->event.pressed) {
             uint8_t mods = get_mods();
