@@ -15,6 +15,18 @@ static void set_layer_color(uint8_t red, uint8_t green, uint8_t blue) {
     rgb_matrix_set_color_all(scale * red, scale * green, scale * blue);
 }
 
+static void set_mse_layer_color(uint8_t red, uint8_t green, uint8_t blue) {
+    float scale = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
+
+    for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+        if (i >= 26) {
+            rgb_matrix_set_color(i, 0, 0, 0);
+        } else {
+            rgb_matrix_set_color(i, scale * red, scale * green, scale * blue);
+        }
+    }
+}
+
 bool rgb_matrix_indicators_user(void) {
     if (keyboard_config.disable_layer_led) {
         return false;
@@ -37,7 +49,7 @@ bool rgb_matrix_indicators_user(void) {
         set_layer_color(0xFF, 0x2D, 0x55);
         break;
     case MSE:
-        set_layer_color(0x9A, 0x9A, 0x9A);
+        set_mse_layer_color(0x9A, 0x9A, 0x9A);
         break;
     default:
         if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
@@ -57,9 +69,6 @@ bool led_update_user(led_t led_state) {
     if (num_state != led_state.num_lock) {
         if (led_state.num_lock) {
             layer_on(MSE);
-            if (!scrl_state) {
-                tap_code(KC_SCRL);
-            }
         } else {
             layer_off(MSE);
             if (scrl_state) {
