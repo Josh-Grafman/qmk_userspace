@@ -34,19 +34,19 @@ bool rgb_matrix_indicators_user(void) {
 
     switch (biton32(layer_state)) {
     case DEF:
-        set_layer_color(0xFF, 0x7A, 0x1A);
+        set_layer_color(0xFB, 0x9B, 0x60);
         break;
     case NAV:
-        set_layer_color(0xFF, 0x3B, 0x30);
+        set_layer_color(0xFF, 0x73, 0x64);
         break;
     case SYM:
-        set_layer_color(0x2F, 0x6B, 0xFF);
+        set_layer_color(0x6F, 0x97, 0xD8);
         break;
     case NUM:
-        set_layer_color(0xFF, 0xC7, 0x00);
+        set_layer_color(0xE6, 0xC3, 0x5A);
         break;
     case EXT:
-        set_layer_color(0xFF, 0x2D, 0x55);
+        set_layer_color(0xD9, 0x55, 0x55);
         break;
     case MSE:
         set_mse_layer_color(0x9A, 0x9A, 0x9A);
