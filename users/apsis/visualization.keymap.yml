@@ -9,7 +9,7 @@ draw_config:
         .layer-DEF text, .layer-DEF use, .layer-DEF rect.held { fill: #FB9B60; }
         .layer-NAV text, .layer-NAV use, .layer-NAV rect.held { fill: #ff7364; }
         .layer-SYM text, .layer-SYM use, .layer-SYM rect.held { fill: #6f97d8; }
-        .layer-NUM text, .layer-NUM use, .layer-NUM rect.held { fill: #FCD662; }
+        .layer-NUM text, .layer-NUM use, .layer-NUM rect.held { fill: #E6C35A; }
         .layer-EXT text, .layer-EXT use, .layer-EXT rect.held { fill: #d95555; }
         rect:has(~ a[href="#EXT"]) { stroke: #d95555; stroke-dasharray: 20 30; stroke-dashoffset: 65; }
         text.held { fill: #1e1e1e; }

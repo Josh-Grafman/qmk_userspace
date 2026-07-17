@@ -10,19 +10,30 @@ void keyboard_post_init_user(void) {
     rgb_matrix_enable();
 }
 
-static void set_layer_color(uint8_t red, uint8_t green, uint8_t blue) {
-    float scale = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
-    rgb_matrix_set_color_all(scale * red, scale * green, scale * blue);
+static void set_layer_hsv(uint8_t hue, uint8_t sat) {
+    HSV hsv = {
+        .h = hue,
+        .s = sat,
+        .v = rgb_matrix_config.hsv.v,
+    };
+    RGB rgb = hsv_to_rgb(hsv);
+
+    rgb_matrix_set_color_all(rgb.r, rgb.g, rgb.b);
 }
 
-static void set_mse_layer_color(uint8_t red, uint8_t green, uint8_t blue) {
-    float scale = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
+static void set_mse_layer_hsv(uint8_t hue, uint8_t sat) {
+    HSV hsv = {
+        .h = hue,
+        .s = sat,
+        .v = rgb_matrix_config.hsv.v,
+    };
+    RGB rgb = hsv_to_rgb(hsv);
 
     for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
         if (i >= 26) {
             rgb_matrix_set_color(i, 0, 0, 0);
         } else {
-            rgb_matrix_set_color(i, scale * red, scale * green, scale * blue);
+            rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
         }
     }
 }
@@ -34,22 +45,22 @@ bool rgb_matrix_indicators_user(void) {
 
     switch (biton32(layer_state)) {
     case DEF:
-        set_layer_color(0xFB, 0x9B, 0x60);
+        set_layer_hsv(18, 255);
         break;
     case NAV:
-        set_layer_color(0xFF, 0x73, 0x64);
+        set_layer_hsv(8, 255);
         break;
     case SYM:
-        set_layer_color(0x6F, 0x97, 0xD8);
+        set_layer_hsv(150, 200);
         break;
     case NUM:
-        set_layer_color(0xE6, 0xC3, 0x5A);
+        set_layer_hsv(38, 255);
         break;
     case EXT:
-        set_layer_color(0xD9, 0x55, 0x55);
+        set_layer_hsv(0, 255);
         break;
     case MSE:
-        set_mse_layer_color(0x9A, 0x9A, 0x9A);
+        set_mse_layer_hsv(0, 0);
         break;
     default:
         if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
