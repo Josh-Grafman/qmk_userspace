@@ -91,7 +91,7 @@ layers:
               { t: "?", s: "!" },
               { t: "", type: "ghost" },
           ]
-        - [NAV, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-return$$, $$mdi:keyboard-space$$]
+        - [NAV, $$mdi:apple-keyboard-shift$$, $$mdi:keyboard-return$$, { t: $$mdi:keyboard-space$$, h: SYM }]
 
     NAV:
         - [
