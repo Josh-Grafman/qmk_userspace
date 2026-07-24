@@ -7,7 +7,6 @@ COMB(lctrl_combo, OS_CTRL, KC_S, KC_T)
 COMB(rshft_combo, OS_SHFT, KC_E, KC_I)
 COMB(rctrl_combo, OS_CTRL, KC_N, KC_E)
 
-COMB(ent_combo, KC_ENT, KC_L, KC_U)
 COMB(lf_combo, LSFT(KC_ENTER), KC_F, KC_P)
 COMB(tab_combo, KC_TAB, KC_U, KC_Y)
 
